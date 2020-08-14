@@ -21,18 +21,18 @@ public class Innings {
         String player1 = input.nextLine();
         System.out.println("Enter the name of second player");
         String player2 = input.nextLine();
-        ArrayList<Player> myPlayers = new ArrayList();
-        myPlayers.add(new PlayersOfWar(player1));
-        myPlayers.add(new PlayersOfWar(player2));
-        WarGame war = new WarGame();
+        //This arraylist contains the player objects
+        ArrayList<PlayersOfWar> myPlayers = new ArrayList();
+        myPlayers.add(PlayerFactory.createPlayer(player1));
+        myPlayers.add(PlayerFactory.createPlayer(player2));
+        WarGame war = WarGame.getInstance();
         war.setPlayers(myPlayers);
-        for(Player p : war.players)
+        //This loop helps to distribute the cards to each player
+        for(PlayersOfWar p : war.players)
         {
-           p.play();
-           
+           p.distributeCards();           
         }
-        war.play();
-        //Players of the game
-        
+        //This call of play method will begin the game
+        war.play();        
     }
 }

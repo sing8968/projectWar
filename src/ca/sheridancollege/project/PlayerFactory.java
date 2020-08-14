@@ -9,6 +9,13 @@ package ca.sheridancollege.project;
  *
  * @author hommies
  */
-public class WarIsHere {
-    
+public class PlayerFactory {
+    private String name = "ToBeAssigned";
+
+    public PlayerFactory() {
+    }
+    public static PlayersOfWar createPlayer(String name)
+    {
+        return new PlayersOfWar(name);
+    }
 }

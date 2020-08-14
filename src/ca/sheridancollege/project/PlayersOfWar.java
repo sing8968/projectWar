@@ -18,8 +18,8 @@ public class PlayersOfWar extends Player{
     }
      
     
-    @Override
-    public void play() {
+    
+    public void distributeCards() {
        GroupOfCards hand26 = new GroupOfCards();
        hand26.distributeCards();
        cardsOfPlayer = hand26.showCards();

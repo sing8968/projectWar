@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public abstract class Game 
 {
     private final String gameName;//the title of the game
-    ArrayList<Player> players=new ArrayList();// the players of the game
+    ArrayList<PlayersOfWar> players=new ArrayList();// the players of the game
     
     public Game(String givenName)
     {
@@ -35,7 +35,7 @@ public abstract class Game
      /**
      * @return the players of this game
      */
-    public ArrayList<Player> getPlayers() 
+    public ArrayList<PlayersOfWar> getPlayers() 
     {
         return players;
     }
@@ -43,7 +43,7 @@ public abstract class Game
     /**
      * @param players the players of this game
      */
-    public void setPlayers(ArrayList<Player> players) 
+    public void setPlayers(ArrayList<PlayersOfWar> players) 
     {
         this.players = players;
     }

@@ -14,10 +14,5 @@ public class MyPlayer extends Player{
     public MyPlayer(String name) {
         super(name);
     }
-
-    @Override
-    public void play() {
-        
-    }
     
 }

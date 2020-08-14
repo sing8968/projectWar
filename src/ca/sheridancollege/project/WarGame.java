@@ -9,9 +9,10 @@ package ca.sheridancollege.project;
  * @author Group Hommies
  */
 public class WarGame extends Game {
-    public WarGame() {
+    private WarGame() {
         super("war");
     }    
+    private static WarGame object = null;
     CompareCards compCards = new CompareCards();
     @Override
     //Well as per the OOP principles i have designed the program to achieve delegation, cohesion and loose coupling
@@ -57,13 +58,9 @@ public class WarGame extends Game {
             System.out.println(players.get(1).getPlayerID() + " is winner");
         }
     }
-
-	/**
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO - implement WarGame.main
-		throw new UnsupportedOperationException();
-	}
+    public static WarGame getInstance()
+    {
+        object=new WarGame();
+        return object;
+    }
 }
